@@ -1,0 +1,34 @@
+.Home {
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+  background-position: top left;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 1432px;
+    height: 1514px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    background-image: url("@/assets/img/common/bgLight.png");
+    background-position: -300px 100px;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+    background-image: url("@/assets/img/common/bgLight.png");
+  }
+
+  &.img-bg {
+    background-repeat: repeat;
+    background-size: 64px 128px;
+  }
+}

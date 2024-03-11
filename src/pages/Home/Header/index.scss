@@ -1,0 +1,96 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.H5 {
+  .Header {
+    height: 64px;
+    padding: 0 8px;
+  }
+}
+
+.Header {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #171D34;
+  color: #fff;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+
+    .img-logo {
+      width: 240px;
+      height: 80px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+
+      .img-amountBg {
+        display: flex;
+        align-items: center;
+        width: 194px;
+        height: 44px;
+        padding-left: 40px;
+
+        .amount-value {
+          overflow: hidden;
+          width: 95px;
+          margin-top: -1px;
+          text-overflow: ellipsis;
+          background-image: linear-gradient(to bottom, #41F7EC, #81FFAC);
+          -webkit-background-clip: text;
+          text-align: right;
+          color: transparent;
+        }
+
+        .img-refresh {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 35px;
+          height: 35px;
+          margin-left: 10px;
+          cursor: pointer;
+
+          .img-rotate {
+            width: 12px;
+            height: 12px;
+
+            &.rotate {
+              animation-name: rotate;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+              animation-fill-mode: forwards;
+              animation-duration: 1s;
+            }
+          }
+        }
+      }
+
+      .img-bell, .img-menu {
+        width: 42px;
+        height: 42px;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}

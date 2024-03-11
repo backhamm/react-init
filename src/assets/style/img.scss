@@ -1,0 +1,30 @@
+$img-path: '../img';
+
+i[class*='icon-'] {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+[class*='img-'] {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+$common: bg, bgLight, arrow, bell, dot, dotAc, hook, logo, menu, refresh, amountBg, bulletin, refresh, line0, line1, checkboxBg, search, drop, selectBg, optionsBg, gameBg, tag2, tag3, tag4, tag5, coin, dialogBg, close, rotate, machineBg, enter, banner0, banner1, banner2;
+@each $item in $common {
+  .img-#{$item} {
+    background-image: url($img-path + '/common/#{$item}.png');
+  }
+}
+
+$button: btn1, btn1Ac, btn3, btn3Ac;
+@each $item in $button {
+  .img-#{$item} {
+    background-image: url($img-path + '/button/#{$item}.png');
+  }
+}
